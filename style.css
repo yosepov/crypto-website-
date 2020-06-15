@@ -1,0 +1,707 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+/*paralax p*/
+
+#paralaxView p {
+  position: relative;
+  font-size: xx-large;
+  color: rgb(255, 41, 41);
+  text-shadow: 1px 1px 5px red;
+  background-color: none;
+  font-family: "Notable", sans-serif;
+  text-align: center;
+  transition: 0.5s;
+}
+
+/* Nav Bar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgb(255, 0, 0);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-shadow: 1px 5px 10px rgb(68, 5, 5);
+}
+
+.logo {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 20px;
+  font-family: "Notable", sans-serif;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.nav-links {
+  display: flex;
+  background-color: none;
+  justify-content: space-around;
+  font-size: medium;
+  width: 30%;
+  color: white;
+}
+
+.nav-links li > a:hover {
+  color: rgb(229, 255, 0);
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+.nav-links li p {
+  display: inline-block;
+  font-weight: bold;
+  font-size: small;
+  color: yellow;
+  cursor: pointer;
+}
+
+.nav-links li p:hover {
+  color: rgb(247, 247, 247);
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div:hover {
+  background-color: rgb(255, 124, 124);
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: rgb(88, 0, 6);
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    color: white;
+  }
+  .nav-links a {
+    color: rgb(54, 21, 21);
+    font-weight: bold;
+  }
+  nav {
+    background-color: white;
+  }
+  .logo {
+    color: rgb(54, 21, 21);
+  }
+  iframe {
+    display: none;
+    position: relative;
+  }
+  .nav-links li p {
+    font-weight: bold;
+    font-size: x-large;
+    color: rgb(80, 6, 6);
+  }
+  .nav-links li > a:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    background-color: rgba(255, 255, 255, 0.925);
+    color: rgb(66, 66, 66);
+  }
+  .nav-links li {
+    opacity: 0;
+    font-size: large;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(44, 34, 34);
+    transition: all 0.5 ease;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFrame {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*^^ End Nav Bar ^^*/
+
+/* paralax view*/
+
+#paralaxBox {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: block;
+}
+
+#paralaxView {
+  width: 100%;
+  height: 400px;
+  background-image: url(assets/pictures/desktopBackground.jpg);
+  background-size: cover;
+  transition: 0.5s;
+  background-attachment: fixed;
+}
+
+#paralaxView p {
+  position: relative;
+  font-size: 32px;
+  color: white;
+  font-family: "Notable", sans-serif;
+  text-align: center;
+  top: 30%;
+
+  transition: 0.5s;
+}
+
+/*Card Design*/
+
+.nameCard {
+  font-size: 18px;
+  color: rgb(255, 0, 0);
+  font-family: "Notable", sans-serif;
+  letter-spacing: 4px;
+}
+
+.nameCard:hover {
+  color: rgb(255, 196, 0);
+}
+
+.card p {
+  font-size: small;
+  width: 100%;
+}
+
+.card button {
+  margin: 5px;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 10px rgb(255, 233, 39);
+}
+
+.card {
+  color: rgb(255, 255, 255);
+  float: left;
+  align-items: center;
+  text-align: center;
+  width: 320px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 2px solid black(255, 255, 255);
+  height: 250px;
+  margin-left: 55px;
+  margin-bottom: 10px;
+  margin-top: 70px;
+  overflow: hidden;
+  box-shadow: 2px 2px rgb(255, 68, 68);
+  transition: 0.5s;
+}
+
+.card div > div {
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.575);
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Sigmar One", cursive;
+  height: 100%;
+  width: 419px;
+}
+
+.card div > div:hover {
+  color: rgb(255, 196, 0);
+}
+
+/*Search Button*/
+
+#searchBox {
+  background-color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+  width: 20%;
+}
+
+#searchBox #searchInput {
+  background-color: rgb(253, 197, 197);
+  border-radius: 10px 0px 0px 10px;
+  height: 29.5px;
+  border: none;
+  text-align: center;
+  width: 70%;
+  color: rgb(73, 60, 60);
+  margin: 3px 0px;
+  font-size: small;
+}
+
+#searchBox span {
+  color: white;
+  cursor: pointer;
+  font-size: large;
+  top: 3.5px;
+  border-radius: 0px 20px 20px 0px;
+  padding: 6.2px;
+  margin: 3px 0px;
+  background-color: rgb(252, 79, 79);
+}
+
+#searchBox span:hover {
+  color: rgb(21, 21, 54);
+  background-color: rgb(255, 196, 0);
+}
+
+/* Mobile & ipad design*/
+
+@media screen and (max-width: 769px) {
+  #searchBox {
+    width: 60%;
+    background-color: white;
+  }
+  #searchBox #searchInput {
+    background-color: rgb(253, 197, 197);
+    border-radius: 10px 0px 0px 10px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    width: 80%;
+    color: rgb(73, 60, 60);
+    margin: 3px 0px;
+  }
+  #searchBox span {
+    color: white;
+    cursor: pointer;
+    top: 3.2px;
+    border-radius: 0px 20px 20px 0px;
+    padding: 6.5px;
+    margin: 3px 0px;
+    background-color: rgb(252, 79, 79);
+  }
+  .card {
+    margin: 80px 0px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.747);
+    border: 2px solid rgba(253, 217, 9, 0.192);
+  }
+  .nameCard {
+    color: rgb(252, 79, 79);
+  }
+  /* paralax view*/
+  #paralaxBox {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  #paralaxView {
+    width: 100%;
+    height: 798px;
+    background-image: url(assets/pictures/TradingGraph.jpeg);
+    opacity: 0.7;
+    background-size: cover;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  #paralaxView p {
+    position: relative;
+    font-size: xx-large;
+    color: rgb(255, 41, 41);
+    text-shadow: 1px 1px 5px red;
+    background-color: rgb(88, 0, 6);
+    border: 2px solid rgb(255, 255, 255);
+    font-family: "Notable", sans-serif;
+    text-align: center;
+    top: 40%;
+    transition: 0.5s;
+  }
+}
+
+/*Toggle Button Style*/
+
+.toggleOn {
+  width: 40%;
+  height: 30px;
+  border: 2px solid white;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-size: small;
+  background-color: rgb(255, 28, 28);
+  transition: all 0.4;
+}
+
+.toggleOn:hover {
+  background-color: rgb(88, 0, 6);
+  color: rgb(255, 255, 255);
+}
+
+.toggleOff {
+  width: 100%;
+  height: 50px;
+  border: none;
+  text-align: center;
+  color: rgb(163, 0, 0);
+  font-size: large;
+  background-color: rgb(255, 198, 75);
+  transition: all 0.4;
+  font-family: "Cinzel", serif;
+}
+
+.toggleOff:hover {
+  background-color: rgb(158, 50, 0);
+  color: rgb(255, 196, 0);
+}
+
+/*More Info button*/
+
+.card > button:nth-child(2) {
+  font-family: "Cinzel", serif;
+  background-color: rgb(255, 0, 0);
+  width: 100%;
+  border: 1px solid white;
+  font-size: medium;
+}
+
+.card > button:nth-child(2):hover {
+  background-color: rgb(214, 71, 71);
+  color: yellow;
+  border: none;
+}
+
+/*Replace Button*/
+.card > button:nth-child(5) {
+  background-color: none;
+  width: 100%;
+  font-size: medium;
+  color: white;
+  height: 50px;
+  border: 1px solid white;
+  animation: replaceButton ease-in 1.5s;
+}
+
+@keyframes replaceButton {
+  0% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: red;
+  }
+}
+
+.card > button:nth-child(5):hover {
+  background-color: rgb(160, 9, 9);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 5px white;
+}
+
+/*Modal Design*/
+#saveChanges:hover {
+  background: white;
+  color: red;
+}
+#saveChanges {
+  border-radius: 20px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 18px;
+  background: red;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+}
+
+.nameModal {
+  color: white;
+  background: rgb(255, 61, 61);
+  text-align: center;
+  border-radius: 20px;
+  font-size: 18px;
+  font-family: "Staatliches", cursive;
+}
+
+/*about*/
+
+#section-one {
+  position: relative;
+  background-image: url(assets/pictures/backgroundImageYellow.jpg);
+  background-size: 100% 500px;
+  background-attachment: fixed;
+  padding: 50px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.445);
+}
+
+#section-one > span {
+  font-size: 22px;
+  font-family: "Notable", sans-serif;
+  display: inline-block;
+  color: white;
+}
+
+#section-one > p {
+  font-size: 22px;
+  font-family: "Notable", sans-serif;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid rgba(255, 0, 0, 0.527);
+  margin-top: 5px;
+  letter-spacing: 10px;
+}
+.aboutMeArticle > p {
+  color: white;
+  letter-spacing: 7px;
+}
+
+.aboutMeArticle > h5 {
+  color: black;
+  text-shadow: 1px 3px orange;
+  font-size: 35px;
+  font-family: "Cinzel", serif;
+  border-bottom: red 1px solid;
+  letter-spacing: 10px;
+}
+.aboutMeArticle {
+  background-color: black;
+  color: orange;
+  font-size: 22px;
+  height: 1400px;
+}
+
+ul > p {
+  display: inline-block;
+  color: red;
+  border-bottom: 1px dashed red;
+  width: 35%;
+}
+
+#aboutBox {
+  transition: 0.5s;
+}
+
+#mePicture {
+  border-radius: 10%;
+  display: inline-block;
+  box-shadow: 1px 2px 30px rgb(124, 0, 0);
+}
+
+/*modal*/
+
+.modalReplaceButton:hover {
+  background-color: rgb(255, 226, 220);
+  color: rgb(221, 0, 0);
+}
+
+.modalReplaceButton:active {
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.modalReplaceButton {
+  width: 100%;
+  height: 40px;
+  font-family: "Cinzel", serif;
+  background-color: rgb(255, 166, 0);
+  margin-bottom: 20px;
+  border: none;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: 0.2s;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.modal-content {
+  background-color: rgb(37, 36, 36);
+  border-radius: 30px;
+}
+
+.modal-header {
+  background-color: rgb(155, 13, 13);
+  border-top: 2px solid rgb(247, 0, 0);
+  border-right: 2px solid rgb(247, 0, 0);
+  border-left: 2px solid rgb(247, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.modal-title {
+  color: white;
+  font-size: 16px;
+  font-family: "Cinzel", serif;
+}
+
+/*chart design*/
+
+.chartButtons:hover {
+  background-color: gold;
+  border-radius: 20px;
+  border: 2px solid rgb(209, 0, 0);
+}
+
+.chartButtons {
+  width: 28%;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(209, 0, 0);
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+  border: 2px solid white;
+}
+
+/*replace button toggle*/
+
+.replaceButton {
+  height: 100px;
+}
+
+/*social icon*/
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.social-network a.icoFacebook:hover {
+  background-color: #3b5998;
+}
+.social-network a.icoTwitter:hover {
+  background-color: #33ccff;
+}
+.social-network a.icoGoogle:hover {
+  background-color: #bd3518;
+}
+.social-network a.icoVimeo:hover {
+  background-color: #0590b8;
+}
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+.social-network a.icoFacebook:hover i,
+.social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i,
+.social-network a.icoVimeo:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+a.socialIcon:hover,
+.socialHoverClass {
+  color: #44bcdd;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  border-radius: 50%;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(255, 0, 0);
+}
+.social-circle li i {
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  transform: rotate(360deg);
+  transition: all 0.2s;
+}
+.social-circle i {
+  color: #fff;
+  transition: all 0.8s;
+}
+
+/*iframe trailer youtube video*/
+
+iframe {
+  position: relative;
+  top: 100px;
+  box-shadow: 1px 2px 10px black;
+}
+
+/*pages*/
+
+#reportsBox {
+  position: relative;
+  top: 100px;
+}
+
+#aboutBox {
+  position: relative;
+  top: 30px;
+}
+
+#searchCoinsBox {
+  position: relative;
+  top: 30px;
+}

@@ -1,0 +1,165 @@
+<html lang="en">
+
+<head>
+
+    <title>Crypto Live</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/assets/icons/icon image.png" />
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.4.1.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="paralaxBox"></div>
+        <div id="paralaxView">
+            <p>GET FREE LIVE STOCK REPORTS</p><br>
+            <iframe width="30%" height="222px" src="https://www.youtube.com/embed/Mvrq8hLjcRk" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </header>
+    <main>
+        <!-- Modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ModalLabel">Your Reports List:</h5>
+                        </button>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button id="saveChanges" type="button" class="btn btn-primary" data-dismiss="modal">SAVE &
+                            CLOSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mainDiv">
+            <div id="searchCoinsBox"></div>
+            <div id="coinsBox">
+            </div>
+            <div id="aboutBox">
+                <section id="section-one">
+
+                    <br>
+                    <img id="mePicture" src="/assets/pictures/aboutMe.jpg" width="400">
+                    <br>
+                    <p>EREZ YOSEPOV</p>
+                </section>
+                <article class="aboutMeArticle">
+                    <p>Pardes Hanna Karkur | Moran 5 st' | 050-903-6091 | yosepov.erez@gmail.com </p><br><br>
+                    <h5> FULLSTACK DEVELOPER </h5>
+                    <ul>
+                        <p>HTML + CSS3 </p><br>
+                        <li>New HTML5 TAGS</li>
+                        <li>CSS3 media queries and advanced selectors</li>
+                        <li>Dynamic page layouts</li>
+                        <li>Bootstrap & flex </li>
+                        <br>
+
+                        <p>JavaScript + TypeScript</p>
+                        <li>Object Oriented </li>
+                        <li>Callbacks, Promises, Async Await</li>
+                        <li>jQuery</li>
+                        <li>Single Page Application foundations </li>
+                        <li>Events</li>
+                        <li>Ajax (RESTful API) </li>
+                        <li>Documentation</li><br>
+
+                        <p>LIBRARIES </p><br>
+                        <li>bootstrap</li>
+                        <li>Jquery</li>
+                        <br>
+
+                        <p>FRAMEWORKS</p><br>
+                        <li>REACT JS + REACT TYPESCRIPT</li>
+                        <li>ANGULAR</li>
+                        <li>NODE.JS</li>
+                        <br>
+                    </ul>
+                    <br><br>
+                    <ul class="social-network social-circle">
+                        <li><a href="https://www.facebook.com/erez.yosepov.92" class="icoFacebook" title="Facebook"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/erez-yosepov-8954aa190/" class="icoLinkedin"
+                                title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <br><br>
+                    <p> Erez Yosepov Copyrights &COPY; 2019</p>
+                </article>
+
+            </div>
+            <div id="reportsBox">
+                <button id="clearChartButton" class="chartButtons"><span
+                        class="glyphicon glyphicon-refresh"></span></button>
+                <button id="stopChartButton" class="chartButtons"><span
+                        class="glyphicon glyphicon-stop"></span></button>
+                <button id="startChartButton" class="chartButtons"><img width="30px" id="playChartLoading"
+                        src="/assets/pictures/loading.gif"><span class="glyphicon glyphicon-play"></span></button>
+                <canvas id="reportsChart"></canvas>
+            </div>
+        </div>
+        <nav>
+            <div class="logo">
+                <h1>Crypto Live</h1>
+            </div>
+            <div id="searchBox">
+                <div id="searchText">
+                    <input type="search" placeholder="Search" id="searchInput"><a href="#searchCoinsBox"
+                        id="searchButton"><span class="glyphicon glyphicon-search"></span></a>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#coinsBox" id="coinsLink"><img width="15px" id="loadingCoinsBox"
+                            src="/assets/pictures/loading.gif">COINS</a>
+                </li>
+                <li>
+                    <a href="#reportsBox" id="reportsLink"><img width="15px" id="loadingReportBox"
+                            src="/assets/pictures/loading.gif">REPORTS</a>
+                </li>
+                <li>
+                    <a href="#aboutBox" id="aboutLink"><img width="15px" id="loadingAboutBox"
+                            src="/assets/pictures/loading.gif">ABOUT</a>
+                </li>
+                <li>
+                    <span><img width="15px" id="loadingReportCounting" src="/assets/pictures/loading.gif">
+                        <p data-toggle="modal" data-target="#modal" id="reportsCount"></p>
+                    </span>
+                </li>
+            </ul>
+            <div class="burger">
+                <div class="firstLine"></div>
+                <div class="secondtLine"></div>
+                <div class="thirdLine"></div>
+            </div>
+        </nav>
+    </main>
+</body>
+
+</html>
